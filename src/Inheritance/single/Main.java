@@ -23,5 +23,7 @@ public class Main {
         //since the reference is parent so we can only acess parent variables and methods
         //Note:- If the Child has overridden a method from the Parent, the Child's version will run
 
+        // Parent -> Child
+
     }
 }
