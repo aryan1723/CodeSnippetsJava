@@ -18,10 +18,8 @@ public class Main {
         System.out.println("Enter price of single unit:");
         price=in.nextInt();
 
-        VehicleShop car1 = new VehicleShop(type,color,model,price,units);
-        VehicleProperties car = car1;
-        VehicleCalculation cost = car1;
+        VehicleShop car = new VehicleShop(type,color,model,price,units);
         car.showdetails();
-        cost.calculatePrice();
+        car.calculatePrice();
     }
 }
