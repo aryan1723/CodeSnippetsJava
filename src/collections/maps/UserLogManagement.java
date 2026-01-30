@@ -121,8 +121,18 @@ public class UserLogManagement {
                 {"Everly Barnes", "Digital Marketing", "watching"},
                 {"Landon Fisher", "Web Development", "enrolled"},
                 {"Anna Henderson", "Cyber Security", "watching"},
+                {"Anna Henderson", "Cyber Security", "watching"},
+                {"Anna Henderson", "Cyber Security", "watching"},
+                {"Anna Henderson", "Cyber Security", "watching"},
+                {"Anna Henderson", "Cyber Security", "watching"},
+                {"Anna Henderson", "Cyber Security", "watching"},
+                {"Anna Henderson", "Cyber Security", "watching"},
+                {"Anna Henderson", "Cyber Security", "watching"},
+                {"Anna Henderson", "Cyber Security", "watching"},
+                {"Anna Henderson", "Cyber Security", "watching"},
                 {"Adrian Coleman", "Cloud Computing", "enrolled"},
                 {"Caroline Simmons", "Business Analytics", "watching"},
+                {"Caroline Simmons", "Business Analytics", "enrolled"},
                 {"Caroline Simmons", "Business Analytics", "watching"},
                 {"Caroline Simmons", "Business Analytics", "watching"},
                 {"Caroline Simmons", "Business Analytics", "watching"},
@@ -154,7 +164,9 @@ public class UserLogManagement {
         Map<String,Integer> Activity = new HashMap<>();
         for(UserData user:MainLog.values()){
             String name = user.name;
-            Activity.put(name,Activity.getOrDefault(name,0)+1);
+            if(!user.activity.equals("enrolled")) {
+                Activity.put(name, Activity.getOrDefault(name, 0) + 1);
+            }
         }
 
         String MostActiveUser1="";
